@@ -20,7 +20,7 @@ enum class PacketType {
 
 typedef struct {
   PacketType type;
-  int content;
+  String content;
 } Packet;
 
 int incomingByte = 0;
@@ -39,7 +39,6 @@ void loop() {
       hehe = "";
     }
 
-    
     if(readingPacket){
       hehe += (char) incomingByte;
       if(incomingByte == ')'){
@@ -49,7 +48,10 @@ void loop() {
       
     } // end if Reading packet
   }
-  else {
-    //Serial.println("no byte recieved");
-  }
+}
+
+String getPacket(){
+  String p = "";
+ 
+  return p;
 }
